@@ -1,0 +1,268 @@
+:root {
+    --maincolor: #fff;
+    --main-back: blueviolet;
+}
+
+::selection {
+    background-color: var(--maincolor);
+    color: var(--main-back);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--main-back, blueviolet);
+}
+
+
+.logo, .navbar, .flex {
+    display: flex;
+}
+
+.navbar {
+    background-color: var(--main-back);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar a {
+    color: var(--maincolor);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: var(--maincolor);
+    color: var(--main-back);
+    font-weight: bold;
+}
+
+
+
+.logo h3 {
+    color: var(--maincolor);
+    letter-spacing: 3px;
+}
+
+.container .main-image {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.7;
+
+}
+
+.cover {
+    position: relative;
+}
+
+.cover h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-50%);
+    color: var(--maincolor);
+}
+
+.toggle-key {
+    width: 30px;
+    height: 25px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+}
+
+.toggle-key span {
+    width: 80%;
+    height: 2px;
+    background-color: black;
+}
+
+.line {
+    width: 50%;
+    height: 3px;
+    background-color: wheat;
+    margin: 50px auto;
+}
+
+.all-card {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+
+}
+
+.all-card .card {
+    width: 30%;
+    height: 300px;
+    color: var(--maincolor);
+    text-align: center;
+    padding-top: 15px;
+    box-shadow: 0px 0px 21px 1px wheat;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: margin-top 0.3s ease-in-out 0s;
+    -webkit-transition: margin-top 0.3s ease-in-out 0s;
+    -moz-transition: margin-top 0.3s ease-in-out 0s;
+    -ms-transition: margin-top 0.3s ease-in-out 0s;
+    -o-transition: margin-top 0.3s ease-in-out 0s;
+}
+
+.all-card .card img {
+    padding-top: 50px;
+}
+
+.all-card .card:hover {
+    cursor: pointer;
+    margin-top: -20px;
+
+}
+
+.how-are-we {
+    width: 70%;
+    min-height: 250px;
+    margin-top: 20px;
+    margin: auto;
+    background-image: linear-gradient(to right, var(--main-back), var(--main-back) white, var(--main-back));
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+fieldset {
+    padding: 20px;
+    border: 1px solid wheat;
+}
+
+legend {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+.how-are-we h1 {
+    color: white;
+    padding: 20px 0px;
+    border: 1px solid wheat;
+
+}
+
+.how-are-we p {
+    color: var(--maincolor);
+    line-height: 35px;
+    font-size: 1.4rem;
+}
+
+footer {
+    border: 3px solid var(--maincolor);
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+footer p {
+    color: var(--maincolor);
+
+}
+
+
+/* Start My Framework  */
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+/* End My Framework  */
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    .navbar, .flex {
+        flex-direction: column;
+    }
+
+    .flex {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .flex a {
+        padding: 7px;
+        margin-bottom: 5px;
+    }
+
+    .logo h3 {
+        padding: 10px 0px;
+    }
+
+    .cover {
+        display: none;
+    }
+
+    .all-card .card {
+        width: 60%;
+        height: 200px;
+        margin-top: 10px;
+        box-shadow: none;
+        border: 1px solid var(--maincolor);
+    }
+
+    .all-card .card img {
+        padding-top: 0px;
+        width: 100px;
+    }
+
+    .all-card .card h1 {
+        font-size: 16px;
+        padding-bottom: 30px;
+    }
+
+    .toggle-key {
+        display: flex;
+
+    }
+
+    .line {
+        display: none;
+        margin: 10px auto;
+    }
+
+    .how-are-we {
+        margin-top: 25px;
+    }
+
+    .how-are-we h1 {
+        display: none;
+    }
+
+    .how-are-we p {
+        font-size: 1rem;
+    }
+
+}

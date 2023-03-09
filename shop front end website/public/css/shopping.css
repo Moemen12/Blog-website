@@ -1,0 +1,185 @@
+:root {
+    --maincolor: #fff;
+    --main-back: blueviolet;
+}
+
+::selection {
+    background-color: var(--maincolor);
+    color: var(--main-back);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--main-back, blueviolet);
+}
+
+
+.logo, .navbar, .flex {
+    display: flex;
+}
+
+.navbar {
+    background-color: var(--main-back);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar a {
+    color: var(--maincolor);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: var(--maincolor);
+    color: var(--main-back);
+    font-weight: bold;
+}
+
+
+
+.logo h3 {
+    color: var(--maincolor);
+    letter-spacing: 3px;
+}
+
+
+.toggle-key {
+    width: 30px;
+    height: 25px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+}
+
+.toggle-key span {
+    width: 80%;
+    height: 2px;
+    background-color: black;
+}
+
+.line {
+    display: none;
+    width: 50%;
+    height: 3px;
+    background-color: wheat;
+    margin: 50px auto;
+}
+
+.shop-holder {
+    width: 100%;
+    min-height: 500px;
+    background-color: plum;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+
+.shop-holder .shop-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    background-color: pink;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    border-radius: 7px;
+    border: 3px solid var(--main-back);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.shop-holder .shop-card h1 {
+    position: absolute;
+    color: #a70dc173;
+
+}
+
+.shop-card img {
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+.shop-card:hover img {
+    transform: scale(1.5);
+}
+
+.warning {
+    text-align: center;
+    color: var(--maincolor);
+    margin-top: 50px;
+
+}
+
+/* Start My Framework  */
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+/* End My Framework  */
+
+
+@media screen and (max-width: 700px) {
+    .navbar, .flex {
+        flex-direction: column;
+    }
+
+    .flex {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .flex a {
+        padding: 7px;
+        margin-bottom: 5px;
+    }
+
+    .logo h3 {
+        padding: 10px 0px;
+    }
+
+
+
+    .toggle-key {
+        display: flex;
+
+    }
+
+    .line {
+        margin: 10px auto;
+    }
+
+
+
+}

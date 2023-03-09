@@ -1,0 +1,125 @@
+:root {
+    --maincolor: #fff;
+    --main-back: blueviolet;
+}
+
+::selection {
+    background-color: var(--maincolor);
+    color: var(--main-back);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--main-back, blueviolet);
+}
+
+.shop-card {
+    width: 654px;
+    height: 420px;
+    background-color: #673ab763;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    border: 2px solid var(--maincolor);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.shop-card img {
+    width: 50%;
+    height: auto;
+}
+
+.shop-card .article {
+    width: 50%;
+    height: auto;
+
+}
+
+.shop-card h2 {
+    color: var(--maincolor);
+    padding: 10%;
+}
+
+.shop-card p {
+    color: var(--maincolor);
+    padding: 10%;
+
+}
+
+.shop-card h3 {
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    font-size: 30px;
+}
+
+.shop-card h1 {
+    margin: auto;
+    margin-top: 30px;
+    border: 3px solid var(--maincolor);
+    width: fit-content;
+    padding: 20px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    cursor: pointer;
+    font-size: large;
+
+}
+
+
+
+
+/* Start My Framework  */
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+/* End My Framework  */
+
+
+
+@media screen and (max-width: 700px) {
+    .shop-card {
+        width: 400px;
+        height: 250px;
+    }
+
+    .shop-card p {
+        font-size: 13px;
+    }
+
+    .shop-card h2 {
+
+        padding: 5px;
+    }
+
+    .shop-card h1 {
+        padding: 10px;
+        margin-top: 15px;
+    }
+}
